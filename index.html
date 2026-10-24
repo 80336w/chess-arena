@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chess.js@1.0.0/dist/chess.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">多人/单人挑战</p>
+          <h1>Chess Arena</h1>
+        </div>
+        <div class="toolbar">
+          <label>
+            模式
+            <select id="gameMode">
+              <option value="chess">国际象棋</option>
+              <option value="xiangqi">中国象棋</option>
+            </select>
+          </label>
+          <label>
+            你执
+            <select id="playerColor">
+              <option value="white">白方</option>
+              <option value="black">黑方</option>
+            </select>
+          </label>
+          <button id="resetBtn">重置棋局</button>
+        </div>
+      </header>
+
+      <main class="board-panel">
+        <div class="status-panel">
+          <div class="status-line" id="statusText">白方先行</div>
+          <div class="legend">
+            <span>国际象棋</span>
+            <span>中国象棋</span>
+          </div>
+        </div>
+
+        <div id="boardWrap" class="board-wrap"></div>
+      </main>
+    </div>
+  </body>
+</html>
