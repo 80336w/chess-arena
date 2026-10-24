@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chess Arena</title>
+    <meta
+      name="description"
+      content="Chess Arena 是一个可玩的国际象棋与中国象棋人机对战网页，适合 GitHub Pages 部署。"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chess.js@1.0.0/dist/chess.min.js"></script>
     <script defer src="app.js"></script>
@@ -12,9 +16,10 @@
     <div class="app-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">多人/单人挑战</p>
+          <p class="eyebrow">人机对战 · 双模式</p>
           <h1>Chess Arena</h1>
         </div>
+
         <div class="toolbar">
           <label>
             模式
@@ -23,6 +28,7 @@
               <option value="xiangqi">中国象棋</option>
             </select>
           </label>
+
           <label>
             你执
             <select id="playerColor">
@@ -30,13 +36,14 @@
               <option value="black">黑方</option>
             </select>
           </label>
-          <button id="resetBtn">重置棋局</button>
+
+          <button id="resetBtn" type="button">重置棋局</button>
         </div>
       </header>
 
       <main class="board-panel">
         <div class="status-panel">
-          <div class="status-line" id="statusText">白方先行</div>
+          <div id="statusText" class="status-line">白方先行</div>
           <div class="legend">
             <span>国际象棋</span>
             <span>中国象棋</span>
